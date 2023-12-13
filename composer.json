@@ -1,0 +1,11 @@
+{
+    "name": "clitor-is-protocol/kevacoin",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ClitorIsProtocol\\Kevacoin\\": "src/"
+        }
+    },
+    "require": {}
+}
