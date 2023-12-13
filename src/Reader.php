@@ -30,8 +30,7 @@ class Reader
                 isset($meta['model']['name'])                 && strtolower($meta['model']['name']) === 'kevacoin' &&
                 isset($meta['model']['software'])             && is_array($meta['model']['software'])              &&
                 isset($meta['model']['software']['version'])  && is_int($meta['model']['software']['version'])     &&
-                isset($meta['model']['software']['protocol']) && is_int($meta['model']['software']['protocol'])    &&
-                isset($meta['model']['namespace'])            && preg_match('/^N[0-9A-z]{33}$/', $meta['model']['namespace'])
+                isset($meta['model']['software']['protocol']) && is_int($meta['model']['software']['protocol'])
             )
         ) $this->_errors[] = _('[_CLITOR_IS_] model not compatible');
 
