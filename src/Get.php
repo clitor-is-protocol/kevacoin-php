@@ -8,7 +8,7 @@ class Get
 {
     private array $_errors = [];
 
-    // Decode pieces data (by keva_get namespace response)
+    // Decode pieces (by keva_get namespace response)
     public function decode(array $pieces): ?string
     {
         $chain = [];
