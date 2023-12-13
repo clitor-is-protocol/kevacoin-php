@@ -62,6 +62,10 @@ class Get
             return null;
         }
 
+        // free mem
+        $chain  = [];
+        $pieces = [];
+
         return $data;
     }
 
