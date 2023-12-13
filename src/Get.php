@@ -38,7 +38,7 @@ class Get
             case isset($meta->pieces)        && is_object($meta->pieces)     &&
                  isset($meta->pieces->total) && is_int($meta->pieces->total) && $meta->pieces->total > 1 &&
                  isset($meta->pieces->size)  && is_int($meta->pieces->size)  && $meta->pieces->size >= 1
-                                                                            && $meta->pieces->size <= 3072:
+                                                                             && $meta->pieces->size <= 3072:
 
                 $this->_errors[] = _('[_CLITOR_IS_] pieces not compatible');
 
