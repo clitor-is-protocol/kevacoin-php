@@ -6,8 +6,10 @@ namespace ClitorIsProtocol\Kevacoin;
 
 class Reader
 {
-    private array  $_errors = [];
-    private array  $_meta   = [];
+    private int    $_protocol = 1;
+
+    private array  $_errors   = [];
+    private array  $_meta     = [];
 
     public function __construct(string $value)
     {
@@ -19,7 +21,7 @@ class Reader
         if // version valid
         (!
             (
-                isset($meta['version']) && preg_match('/[\d]{2}\.[\d]{2}\.[\d]{2}/', $meta['version'])
+                isset($meta['version']) && preg_match(sprintf('/^%s\./', $this->_protocol), $meta['version'])
             )
         ) $this->_errors[] = _('[_CLITOR_IS_] version not compatible');
 
@@ -127,10 +129,10 @@ class Reader
         return !empty($this->_meta['file']['mime']) ? $this->_meta['file']['mime'] : null;
     }
 
-    // Get File Length
-    public function fileLength(): ?string
+    // Get File Size
+    public function fileSize(): ?int
     {
-        return !empty($this->_meta['file']['length']) ? $this->_meta['file']['length'] : null;
+        return !empty($this->_meta['file']['size']) ? $this->_meta['file']['size'] : null;
     }
 
     // Get File Name
