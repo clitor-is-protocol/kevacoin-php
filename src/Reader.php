@@ -41,7 +41,7 @@ class Reader
         (!
             (
                 isset($meta['pieces'])          && is_array($meta['pieces'])        &&
-                isset($meta['pieces']['total']) && is_int($meta['pieces']['total']) && $meta['pieces']['total'] > 1 &&
+                isset($meta['pieces']['total']) && is_int($meta['pieces']['total']) && $meta['pieces']['total'] > 0 &&
                 isset($meta['pieces']['size'])  && is_int($meta['pieces']['size'])  && $meta['pieces']['size'] >= 1
                                                                                     && $meta['pieces']['size'] <= 3072
             )
